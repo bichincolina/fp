@@ -1,5 +1,5 @@
-# Solicitar al usuario que ingrese su 
-variable_entera = input("Por favor, ingresa un numero: ")
+# Solicitar al usuario que ingrese su nombre
+nombre = input("Por favor, ingresa tu nombre: ")
 
 # Imprimir un saludo personalizado
-print("Hola,", variable_entera, "! Bienvenido a Python.")
+print("Hola,", nombre, "! Bienvenido a Python.")
