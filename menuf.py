@@ -16,6 +16,7 @@ while suma_:
     print("n°1 suma")
     print("n°2 resta")
     print("n°3 multiplicacion")
+    print("n°4 division")
     op=int(input())
 
 
@@ -37,6 +38,12 @@ while suma_:
             num2=int(input())
             print("el resultado de la multiplicacion es:", multiplacion_(num1,num2))
         case 4:
+            print("ingrese numeros")
+            num1=int(input())
+            num2=int(input())
+            print("el resultado de su divisio es", division(num1,num2))
+
+
 
         
 

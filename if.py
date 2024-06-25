@@ -31,5 +31,3 @@ elif num2>num3:
 else:
         print("el numero mayor es", num3)
 
-
-

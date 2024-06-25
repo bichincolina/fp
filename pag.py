@@ -13,4 +13,3 @@ for valor in lista_numeros:
         print("el numero",valor, "es mayor que 3")
     #print("este valor es",valor)
 
-

@@ -87,13 +87,13 @@
 # for i in range  (1,11):
 #     print(num ,"x ", i , "=", num*i)
 
-# cant_imp=0
-# num=int(input())
-# for i in range(num+1):
-#     if i%2!=0:
-#         print(i)
-#         cant_imp=cant_imp+1
-# print("la cantidad de impares es", cant_imp)
+cant_imp=0
+num=int(input())
+for i in range(num+1):
+    if i%2!=0:
+        print(i)
+        cant_imp=cant_imp+1
+print("la cantidad de impares es", cant_imp)
 
 
 # print("ingrese un numero")
