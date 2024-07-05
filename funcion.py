@@ -181,9 +181,101 @@
 # resultado=buscar_valor(mi_diccionario,clave_buscada)
 # print(resultado)
 
-from funCalculadora import*
+# from funCalculadora import*
 
-sumar(9,9)
-restar(9,9)
-multiplicar(9,9)
-dividir(9,9)
+# sumar(9,9)
+# restar(9,9)
+# multiplicar(9,9)
+# dividir(9,9)
+
+
+# def suma(a,b):
+#     sumar =a+b
+#     return (sumar)
+# num1=int(input("ingrese el primer numero: "))
+# num2=int(input("ingrese el segundo numero: "))
+# print(f"la suma es: ",suma(num1,num2))}}
+
+
+
+# hotel=[[],[],[],[],[],[],[],[]
+#       ],
+
+
+matriz= [
+    [[],[],[]], #piso 1
+    [[],[],[]],#piso 2
+    [[],[],[]],#piso 3
+]
+
+def ingresar(piso, hab , name):
+    piso=int(input("ingrese el piso\n"))
+    while piso<1 or piso>3:
+        piso=int(input("ingrese el piso del 1 al 3\n"))
+    hab=int(input("ingrese la habitacion\n"))
+    while piso<1 or piso>3:
+        piso=int(input("ingrese la habitacion del 1 al 3\n"))
+    name=input("ingrese su nombre")
+    matriz [piso-1][hab-1]=name
+ingresar ()
+def verificar(piso,hab):
+     if matriz[piso-1][hab-1]!=[]:
+          return False
+     else:
+          return True
+def mostar():
+    for i in matriz:
+                print(i)
+def contar_ventas():
+     totalventa=0
+     for piso in matriz:
+          for hab in piso:
+               if hab !=[]:
+                    totalventa=totalventa+100
+     print (totalventa)
+def guardar():
+     with open("info.txt", "a") as f:
+          for piso in matriz:
+               for hab in piso:
+                  f.write(str(hab))
+                  f.write('\n')
+     
+for i in matriz:
+    print (i)
+
+while True:
+    print("""Bienvenido al hotel transilvania
+          1.- ingresar pasajero
+          2.- verificar hotel
+          3.- guardar registro
+          4.- salir""")
+
+    op=int(input("seleccione una opcion\n"))
+    match op:
+        case 1:
+              piso=int(input("ingrese el piso\n"))
+              while piso<1 or piso>3:
+                  piso=int(input("ingrese el piso del 1 al 3\n"))
+              hab=int(input("ingrese la habitacion\n"))
+              while piso<1 or piso>3:
+                  piso=int(input("ingrese la habitacion del 1 al 3\n"))
+              if verificar(piso,hab) ==False:
+                   ("la habitacion esta ocupada")
+              else:
+                   name=input("ingrese nombre")
+                   ingresar(piso,hab,name)
+              name=input("ingrese su nombre")
+              matriz [piso-1][hab-1]=name
+              ingresar()
+        case 2:
+            mostar()
+            contar_ventas()
+           
+        case 3:
+              guardar()
+    
+        case 4:
+            print("que tenga buen dia ")
+            break 
+        case _ :
+            print("seleccione una opcion valida")
