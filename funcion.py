@@ -202,80 +202,199 @@
 #       ],
 
 
-matriz= [
-    [[],[],[]], #piso 1
-    [[],[],[]],#piso 2
-    [[],[],[]],#piso 3
+# matriz= [
+#     [[],[],[]], #piso 1
+#     [[],[],[]],#piso 2
+#     [[],[],[]],#piso 3
+# ]
+
+# def ingresar(piso, hab , name):
+#     piso=int(input("ingrese el piso\n"))
+#     while piso<1 or piso>3:
+#         piso=int(input("ingrese el piso del 1 al 3\n"))
+#     hab=int(input("ingrese la habitacion\n"))
+#     while piso<1 or piso>3:
+#         piso=int(input("ingrese la habitacion del 1 al 3\n"))
+#     name=input("ingrese su nombre")
+#     matriz [piso-1][hab-1]=name
+    
+# def verificar(piso,hab):
+#      if matriz[piso-1][hab-1]!=[]:
+#           return False
+#      else:
+#           return True
+# def mostar():
+#     for i in matriz:
+#                 print(i)
+# def contar_ventas():
+#      totalventa=0
+#      for piso in matriz:
+#           for hab in piso:
+#                if hab !=[]:
+#                     totalventa=totalventa+100
+#      print (totalventa)
+# def guardar():
+#      with open("info.txt", "a") as f:
+#           for piso in matriz:
+#                for hab in piso:
+#                   f.write(str(hab))
+#                   f.write('\n')
+     
+# for i in matriz:
+#     print (i)
+
+# while True:
+#     print("""Bienvenido al hotel transilvania
+#           1.- ingresar pasajero
+#           2.- verificar hotel
+#           3.- guardar registro
+#           4.- salir""")
+
+#     op=int(input("seleccione una opcion\n"))
+#     match op:
+#         case 1:
+#               piso=int(input("ingrese el piso\n"))
+#               while piso<1 or piso>3:
+#                   piso=int(input("ingrese el piso del 1 al 3\n"))
+#               hab=int(input("ingrese la habitacion\n"))
+#               while piso<1 or piso>3:
+#                   piso=int(input("ingrese la habitacion del 1 al 3\n"))
+#               if verificar(piso,hab) ==False:
+#                    ("la habitacion esta ocupada")
+#               else:
+#                    name=input("ingrese nombre")
+#                    ingresar(piso,hab,name)
+#               name=input("ingrese su nombre")
+#               matriz [piso-1][hab-1]=name
+#               ingresar()
+#         case 2:
+#             mostar()
+#             contar_ventas()
+           
+#         case 3:
+#               guardar()
+    
+#         case 4:
+#             print("que tenga buen dia ")
+#             break 
+#         case _ :
+#             print("seleccione una opcion valida")
+
+
+# hotel=[
+#     [[],[],[],[]],
+#     [[],[],[],[]],
+#     [[],[],[],[]],
+#     ]
+
+# def ingresar(piso, hab , name):
+#     piso=int(input("ingrese el piso\n"))
+#     while piso<1 or piso>3:
+#         piso=int(input("ingrese el piso del 1 al 3\n"))
+#     hab=int(input("ingrese la habitacion\n"))
+#     while piso<1 or piso>3:
+#         piso=int(input("ingrese la habitacion del 1 al 3\n"))
+#     name=input("ingrese su nombre")
+#     hotel [piso-1][hab-1]=name
+
+
+
+# def verificar():
+#     if hotel [piso-1][hab-1]!=[]:
+#         return False
+
+
+
+# def ventas():
+#     total=total+3000
+
+
+# while True:
+#     print("""Bienvenido al hotel transilvania
+#           1.- ingresar pasajero
+#           2.- verificar hotel
+#           3.- guardar registro
+#           4.- salir""")
+
+#     op=int(input("seleccione una opcion\n"))
+#     match op:
+
+#         case 1: 
+#             ingresar(hab,piso,name)
+
+#         case 2: 
+#             print(hotel)
+#             verificar()
+            
+
+#         case 3: 
+#             ventas()
+
+#         case 4: 
+#             print("salir del programa")
+#             break
+        
+#         case _:
+#             print("escoge una alternativa de las que existan")
+
+
+
+hotel = [
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
+    [[], [], [], [], [], [], ],
 ]
 
-def ingresar(piso, hab , name):
-    piso=int(input("ingrese el piso\n"))
-    while piso<1 or piso>3:
-        piso=int(input("ingrese el piso del 1 al 3\n"))
-    hab=int(input("ingrese la habitacion\n"))
-    while piso<1 or piso>3:
-        piso=int(input("ingrese la habitacion del 1 al 3\n"))
-    name=input("ingrese su nombre")
-    matriz [piso-1][hab-1]=name
-ingresar ()
-def verificar(piso,hab):
-     if matriz[piso-1][hab-1]!=[]:
-          return False
-     else:
-          return True
-def mostar():
-    for i in matriz:
-                print(i)
-def contar_ventas():
-     totalventa=0
-     for piso in matriz:
-          for hab in piso:
-               if hab !=[]:
-                    totalventa=totalventa+100
-     print (totalventa)
-def guardar():
-     with open("info.txt", "a") as f:
-          for piso in matriz:
-               for hab in piso:
-                  f.write(str(hab))
-                  f.write('\n')
-     
-for i in matriz:
-    print (i)
+def resv(piso, num_habi, nombre):
+    if not hotel[piso][num_habi]:  # Verificar si la habitación está vacía
+        hotel[piso][num_habi] = nombre
+        print(f"Reserva realizada para {nombre} en el piso {piso}, habitación {num_habi}.")
+    else:
+        print(f"Estimado/a {nombre}, la habitación {num_habi} del piso {piso} se encuentra ocupada, redireccionando a menú principal.")
+
+def guardar_reserva(piso, num_habi, nombre):
+    with open("hotel.txt", "w") as archivo:
+        archivo.write(f"Su habitacion esta en el piso {piso}, numero {num_habi}. Gracias por su compra :D, {nombre}.")
+
+def saber(hotel):
+    for i, piso in enumerate(hotel):
+        for j, habitacion in enumerate(piso):
+            if not habitacion:
+                print(f"Habitación {j} del piso {i} está disponible.")
+            else:
+                print(f"Habitación {j} del piso {i} está ocupada.")
 
 while True:
-    print("""Bienvenido al hotel transilvania
-          1.- ingresar pasajero
-          2.- verificar hotel
-          3.- guardar registro
-          4.- salir""")
-
-    op=int(input("seleccione una opcion\n"))
+    print("Bienvenido al hotel duocuc")
+    print("""
+ // ¿Qué desea hacer? //
+1. Reservar una habitación.
+2. Ver todas las habitaciones.
+3. Verificar disponibilidad de habitaciones.
+4. Salir.
+    """)
+    op = int(input("Seleccione una opción: "))
     match op:
-        case 1:
-              piso=int(input("ingrese el piso\n"))
-              while piso<1 or piso>3:
-                  piso=int(input("ingrese el piso del 1 al 3\n"))
-              hab=int(input("ingrese la habitacion\n"))
-              while piso<1 or piso>3:
-                  piso=int(input("ingrese la habitacion del 1 al 3\n"))
-              if verificar(piso,hab) ==False:
-                   ("la habitacion esta ocupada")
-              else:
-                   name=input("ingrese nombre")
-                   ingresar(piso,hab,name)
-              name=input("ingrese su nombre")
-              matriz [piso-1][hab-1]=name
-              ingresar()
-        case 2:
-            mostar()
-            contar_ventas()
-           
-        case 3:
-              guardar()
-    
-        case 4:
-            print("que tenga buen dia ")
-            break 
-        case _ :
-            print("seleccione una opcion valida")
+        case(1):
+            piso = int(input("Ingrese el piso: "))
+            num_habi = int(input("Ingrese el número de su habitación: "))
+            nombre = input("Ingrese su nombre para la reserva: ")
+            resv(piso, num_habi, nombre)
+            guardar_reserva(piso, num_habi, nombre)
+        case (2):
+            for piso in hotel:
+                print(piso)
+        case (3):
+            saber(hotel)
+        case (4):
+            print("usted ha salido")
+            break
+        case (_):
+            print("opcion invalida ._.")
